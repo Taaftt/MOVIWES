@@ -32,4 +32,6 @@ file = {
 for file_id, file_name in file.items():
     # Descargar y leer el CSV en un DataFrame
     df = csv_drive(file_id)
-    st.write(df)
+    skjksd= "Iron Man"
+    sapa = df.loc[df["title] ==skjksd]
+    st.write(sapa)
