@@ -21,6 +21,7 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 df = Cargar_CSV(id)
 
 
+"""
 # ID de la película seleccionada
 pelicula_id = 299536
 
@@ -29,6 +30,8 @@ pelicula_seleccionada = df[df["id"] == pelicula_id].iloc[0]
 
 # Construir la URL de la imagen usando el backdrop_path de la película seleccionada
 id_img = pelicula_seleccionada["backdrop_path"]
+"""
+id_img = "/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg"
 url_img = f"https://image.tmdb.org/t/p/w342/{id_img}"
 
 # Mostrar la imagen de la película seleccionada
