@@ -15,8 +15,8 @@ def Cargar_CSV(id_url):
     return df
 
 # Cargar el archivo CSV con el ID proporcionado
-df= Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
+a = Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
 # Mostrar las primeras 5 filas del DataFrame en Streamlit
-asd = df.head(5)
+asd = a.head(5)
 st.write(asd)
