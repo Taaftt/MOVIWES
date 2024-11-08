@@ -15,7 +15,7 @@ def Cargar_CSV(id_url):
 
 df = Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
-
+asd = df.head(10)
 # Mostrar las primeras 5 filas en Streamlit
-st.write(df.head(5))
+st.write(asd)
 
