@@ -22,7 +22,6 @@ def csv_drive(file_id):
     # Intentar leer el archivo CSV en un DataFrame
     df = pd.read_csv(csv_content, sep=',',encoding='ISO-8859-1',engine='python', on_bad_lines='skip').fillna(0)
     return df
-  st.write(df)
 
 # Diccionario de ID de archivo de Google Drive y nombres de archivo
 file = {
