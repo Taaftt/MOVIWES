@@ -32,6 +32,4 @@ file = {
 for file_id, file_name in file.items():
     # Descargar y leer el CSV en un DataFrame
     df = csv_drive(file_id)
-    kfkf = "Shrek"
-    sapa = df.loc[df['title'] == kfkf]
-    st.write(sapa)
+    st.write(df)
