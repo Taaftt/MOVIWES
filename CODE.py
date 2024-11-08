@@ -10,9 +10,9 @@ def Cargar_CSV(id_url):
   gdown.download(url, output, quiet=False)
 
   #Leer el drive
-  df = pd.read_csv(output)
-  return df
-Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
+  Lectura = pd.read_csv(output)
+  return lectura
+df = Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
 
 # Mostrar las primeras 5 filas en Streamlit
