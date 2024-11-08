@@ -11,11 +11,12 @@ def Cargar_CSV(id_url):
     gdown.download(url, output, quiet=False)
     
     # Leer el archivo CSV descargado
-    Lectura = pd.read_csv(output)
-    return Lectura
+    df = pd.read_csv(output)
+    return df
 
 # Cargar el archivo CSV con el ID proporcionado
-Lectura = Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
+df= Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
 # Mostrar las primeras 5 filas del DataFrame en Streamlit
-st.write(Lectura.head(5))
+asd = df.head(5)
+st.write(asd)
