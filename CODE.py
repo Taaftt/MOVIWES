@@ -20,7 +20,14 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
 
-asd =df.head(10)
-st.write(asd)
+# Selector de ID
+selected_id = st.selectbox("Selecciona el ID", df['id'].unique())
 
+# Filtra el DataFrame según el ID seleccionado
+selected_movie = df[df['id'] == selected_id].iloc[0]
+
+# Muestra los detalles de la película
+st.write("### Título:", selected_movie['title'])
+st.write("**Fecha de Lanzamiento:**", selected_movie['release_date'])
+st.image(selected_movie['poster_path'], caption=selected_movie['title'])
 
