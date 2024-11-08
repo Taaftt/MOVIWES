@@ -1,9 +1,16 @@
 import pandas as pd
-import requests
-from io import BytesIO
+import gdown
+import streamlit as st
 
-# Reemplaza la URL con el enlace de descarga directo de Google Drive
+# URL directa del archivo en Google Drive
 url = "https://drive.google.com/uc?export=download&id=1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
-response = requests.get(url)
-df = pd.read_csv(BytesIO(response.content))
-st.write(df)
+
+# Descargamos el archivo usando gdown
+output = 'archivo.csv'
+gdown.download(url, output, quiet=False)
+
+# Leemos el archivo CSV
+df = pd.read_csv(output)
+
+# Mostramos las primeras 5 filas en Streamlit
+st.write(df.head())
