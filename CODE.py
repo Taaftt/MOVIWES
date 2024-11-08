@@ -4,7 +4,7 @@ import streamlit as st
 
 #ID del drive
 id ="1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
-url = f'https://drive.google.com/uc?export=download&id={id_url}'
+url = f'https://drive.google.com/uc?export=download&id={id}'
 output = "archivo.csv"
     
 # Descargar el archivo de Google Drive con gdown
