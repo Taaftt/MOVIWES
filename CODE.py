@@ -21,14 +21,15 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 df = Cargar_CSV(id)
 
 
+# ID de la película seleccionada
+pelicula_id = 299536
 
-id_peli =5
-# Filtrar el DataFrame para obtener la fila correspondiente al ID seleccionado
-pelicula = df[df["id"] == id_peli].iloc[0]
+# Filtrar la película seleccionada
+pelicula_seleccionada = df[df["id"] == pelicula_id].iloc[0]
 
-# Obtener la imagen y el título de la película
-imagen = pelicula["poster_path"]
-titulo = pelicula['title']  # Asumiendo que hay una columna llamada 'titulo' para el nombre de la película
+# Construir la URL de la imagen usando el backdrop_path de la película seleccionada
+id_img = pelicula_seleccionada["backdrop_path"]
+url_img = f"https://image.tmdb.org/t/p/w342/{id_img}"
 
 # Mostrar la imagen de la película seleccionada
-st.image(imagen, caption=f"Película: {titulo}", use_column_width=True)
+st.image(url_img, caption="Imagen de la película seleccionada")
