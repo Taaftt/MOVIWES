@@ -6,5 +6,5 @@ from io import BytesIO
 url = 'https://drive.google.com/uc?export=download&id=TU_ARCHIVO_ID'
 response = requests.get(url)
 df = pd.read_csv(BytesIO(response.content))
-
-st.write(df)
+ol= df.head(5)
+st.write(ol)
