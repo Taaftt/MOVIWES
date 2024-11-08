@@ -5,13 +5,14 @@ def Cargar_CSV(id_url):
   #Link del df del google drive
   url = f'https://drive.google.com/uc?export=download&id={id_url}'
   output = "archivo.csv"
+  
   #Descargar nuestro drive con gdown
-  #Quiet = muestra msj del proceso de descargar pa ver si cargan bien
   gdown.download(url, output, quiet=False)
 
   #Leer el drive
   Lectura = pd.read_csv(output)
   return lectura
+
 df = Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
 
