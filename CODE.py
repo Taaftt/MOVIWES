@@ -3,7 +3,7 @@ import gdown
 import streamlit as st
 def Cargar_CSV(id_url):
   #Link del df del google drive
-  url = f'https://drive.google.com/uc?export=download&id={id_url}'
+  url = f'https://drive.google.com/uc?export=download&id={+id_url}'
   
   #Descargar nuestro drive con gdown
   #Quiet = muestra msj del proceso de descargar pa ver si cargan bien
