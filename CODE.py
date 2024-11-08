@@ -1,16 +1,19 @@
 import pandas as pd
 import gdown
 import streamlit as st
+def Cargar_CSV(id_url):
+  #Link del df del google drive
+  url = f'https://drive.google.com/uc?export=download&id={id_url}'
+  
+  #Descargar nuestro drive con gdown
+  #Quiet = muestra msj del proceso de descargar pa ver si cargan bien
+  gdown.download(url, "archivo.csv", quiet=False)
 
-# Enlace directo de Google Drive
-url = "https://drive.google.com/uc?export=download&id=1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
+  #Leer el drive
+  df = pd.read_csv(output)
+  return df
+Cargar_CSV("1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy")
 
-# Descargar el archivo usando gdown
-output = 'archivo.csv'
-gdown.download(url, output, quiet=False)
-
-# Leer el archivo CSV
-df = pd.read_csv(output)
 
 # Mostrar las primeras 5 filas en Streamlit
 st.write(df.head(5))
