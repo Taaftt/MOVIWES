@@ -20,6 +20,8 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
 
+asd =df.head(10)
+st.write(asd)
 
 """
 # ID de la película seleccionada
@@ -36,3 +38,4 @@ url_img = f"https://image.tmdb.org/t/p/w342/{id_img}"
 
 # Mostrar la imagen de la película seleccionada
 st.image(url_img, caption="Imagen de la película seleccionada")
+"""
