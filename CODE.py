@@ -26,7 +26,7 @@ selected_id = st.selectbox("Selecciona el ID", df['id'].unique())
 # Filtra el DataFrame según el ID seleccionado
 selected_movie = df[df['id'] == selected_id].iloc[0]
 
-url_img = f"https://image.tmdb.org/t/p/w342/{id_img}"
+url_img = f"https://image.tmdb.org/t/p/w342/"
 # Muestra los detalles de la película
 st.write("### Título:", selected_movie['title'])
 st.write("**Fecha de Lanzamiento:**", selected_movie['release_date'])
