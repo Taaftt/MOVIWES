@@ -26,7 +26,7 @@ Name_seleccionado = st.selectbox("Selecciona el nombre", df['title'].unique())
 titulo_seleccion = st.selectbox("Selecciona la película", df['title'].unique())
 
 # Filtra segun lo seleccionada
-selected_movie = df[df['title'] == Name_seleccionad].iloc[0]
+selected_movie = df[df['title'] == Name_seleccionado].iloc[0]
 selected_movie = df[df['title'] == titulo_seleccion].iloc[0]
 
 # Mostrar cosas basicas de la peli
