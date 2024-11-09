@@ -20,17 +20,4 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
 
-url_img = f"https://image.tmdb.org/t/p/w342/"
-# Selector de ID
-Name_seleccionado = st.selectbox("Selecciona el nombre", df['title'].unique())
-
-
-# Filtra segun lo seleccionada
-selected_movie = df[df['title'] == Name_seleccionado].iloc[0]
-
-
-# Mostrar cosas basicas de la peli
-st.write("### Título:", selected_movie['title'])
-st.write("**Fecha de Lanzamiento:**", selected_movie['release_date'])
-st.image(url_img +selected_movie['poster_path'], caption=selected_movie['title'])
-
+st.write(df.head())
