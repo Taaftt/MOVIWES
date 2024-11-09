@@ -4,7 +4,7 @@ import streamlit as st
 
 def Cargar_CSV(id):
     # URL del arhivo pal drive
-    url = f' https://mega.nz/file/{id}'
+    url = mega.download_url(url_mega)
     output = "archivo.csv"
 
     # Descargar el df de google drive
@@ -15,7 +15,7 @@ def Cargar_CSV(id):
     return df
 
 # ID del archivo de Google Drive
-id = "wwoCBCxC#-67PBibMLweJpc30l6rvt5KapRG29aUcmGcQm9S8fGA"
+id = "https://mega.nz/file/wwoCBCxC#-67PBibMLweJpc30l6rvt5KapRG29aUcmGcQm9S8fGA"
 
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
