@@ -1,21 +1,28 @@
 import pandas as pd
 from mega import Mega
 import streamlit as st
+import os
 
-def Cargar_CSV(id):
-    # URL del arhivo pal drive
-    url = mega.download_url(url_mega)
-    
+def Cargar_CSV(url_mega):
+    """
+    Función que descarga el archivo CSV desde Mega y lo carga en un DataFrame.
+    El archivo se descarga solo una vez, ya que la función usa Streamlit cache.
+    """
+    # Iniciar sesión en Mega
+    mega = Mega()
+
+    # Descargar el archivo CSV desde Mega (se descarga en una ubicación temporal)
+    archivo_mega = mega.download_url(url_mega)
 
     # Leer el archivo CSV descargado
     df = pd.read_csv(archivo_mega)
     return df
 
-# ID del archivo de Google Drive
-id = "https://mega.nz/file/wwoCBCxC#-67PBibMLweJpc30l6rvt5KapRG29aUcmGcQm9S8fGA"
+# URL del archivo de Mega (archivo público)
+url_mega = "https://mega.nz/file/wwoCBCxC#-67PBibMLweJpc30l6rvt5KapRG29aUcmGcQm9S8fGA"
 
-# Cargar el archivo CSV
-df = Cargar_CSV(id)
+# Cargar el archivo CSV desde Mega
+df = Cargar_CSV(url_mega)
 
 url_img = f"https://image.tmdb.org/t/p/w342/"
 # Selector de ID
