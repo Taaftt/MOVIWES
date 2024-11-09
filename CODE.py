@@ -5,13 +5,10 @@ import streamlit as st
 def Cargar_CSV(id):
     # URL del arhivo pal drive
     url = mega.download_url(url_mega)
-    output = "archivo.csv"
-
-    # Descargar el df de google drive
-    gdown.download(url, output, quiet=False)
+    
 
     # Leer el archivo CSV descargado
-    df = pd.read_csv(output)
+    df = pd.read_csv(archivo_mega)
     return df
 
 # ID del archivo de Google Drive
