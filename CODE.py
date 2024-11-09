@@ -32,5 +32,4 @@ st.write("### Título:", selected_movie["title"])
 st.write("**Fecha de Lanzamiento:**", selected_movie["release_date"])
 st.image(url_img +selected_movie["poster_path"], caption=selected_movie["title"])
 
-#BUSCAR COMO OPTIMIZAR LA PAG, VA LENTISIMO
 
