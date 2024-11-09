@@ -20,7 +20,6 @@ id = "1GtL6SWSG0u7ozN5_8aQVGnYSDYt6VW8x"
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
 
-st.write(df.head())
 url_img = f"https://image.tmdb.org/t/p/w342/"
 # Selector de ID
 titulo_seleccion = st.selectbox("Selecciona la película", df["title"].unique())
