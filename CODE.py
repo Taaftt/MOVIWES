@@ -8,7 +8,7 @@ def Cargar_CSV(id):
     output = "archivo.csv"
 
     # Descargar el df de google drive
-    gdown.download(url, output, quiet=False)
+    gdown.download(url, output, quiet=True)
 
     # Leer el archivo CSV descargado
     df = pd.read_csv(output)
