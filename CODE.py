@@ -1,10 +1,10 @@
 import pandas as pd
-import gdown
+from mega import Mega
 import streamlit as st
 
 def Cargar_CSV(id):
     # URL del arhivo pal drive
-    url = f'https://drive.google.com/uc?export=download&id={id}'
+    url = f' https://mega.nz/file/{id}'
     output = "archivo.csv"
 
     # Descargar el df de google drive
@@ -15,7 +15,7 @@ def Cargar_CSV(id):
     return df
 
 # ID del archivo de Google Drive
-id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
+id = "wwoCBCxC#-67PBibMLweJpc30l6rvt5KapRG29aUcmGcQm9S8fGA"
 
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
