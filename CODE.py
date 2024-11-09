@@ -20,4 +20,16 @@ id = "1LlKcNqJA3zlbC76KvaYbIF4ZGPyEZoHy"
 # Cargar el archivo CSV
 df = Cargar_CSV(id)
 
-st.write(df.head())
+url_img = f"https://image.tmdb.org/t/p/w342/"
+# Selector de ID
+titulo_seleccion = st.selectbox("Selecciona la película", df["title"].unique())
+
+# Filtra segun lo seleccionada
+selected_movie = df[df["title"] == titulo_seleccion].iloc[0]
+
+# Mostrar cosas basicas de la peli
+st.write("### Título:", selected_movie["title"])
+st.write("**Fecha de Lanzamiento:**", selected_movie["release_date"])
+st.image(url_img +selected_movie["poster_path"], caption=selected_movie["title"])
+
+#BUSCAR COMO OPTIMIZAR LA PAG, VA LENTISIMO
